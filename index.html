@@ -1,0 +1,83 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>
+         Welcome
+      </title>
+      <link rel="stylesheet" href="style2.css">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link href="logo.png" rel="icon">
+      <link href="logo.png" rel="apple-touch-icon">
+      <script  type="text/javascript">
+         function val()
+         {
+           if(document.getElementById("uname").value=="")
+           {
+             alert("Enter your email!");
+             document.getElementById("uname").focus();
+             return false;
+           }
+         
+           if(document.getElementById("pass").value=="")
+           {
+             alert("Enter Password!");
+             document.getElementById("pass").focus();
+             return false;
+           }
+           
+         }
+      </script>
+   </head>
+   <body>
+      <div class="hero">
+         <div class="form-box">
+            <div class="button-box" data-aos="fade-down">
+               <div id="btn"></div>
+               <button type="button" class="toggle-btn" onclick="Login()">LOGIN</button>
+               <button type="button" class="toggle-btn" onclick="Register()">REGISTER</button>
+            </div>
+            <div class="social-icons" data-aos="fade-down">
+               <img src="fb.png">
+               <img src="tw.png">
+               <img src="gp.png">
+            </div>
+            <form id="login" class="input-group" method="post" onsubmit="return val()">
+              <div data-aos="fade-down">
+               <input type="email" name="uname" id="uname"  class="input-field" placeholder="Email">
+               <input type="password" name="pass" id="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" class="input-field" placeholder="Enter Password">
+               <br><br><br>
+               <button type="submit" name="submit" class="submit-btn">LOGIN</button>
+               <p><br>Forgot Password? <a class="usrsn" href="#">Recovery</a></p>
+              </div>
+            </form>
+            
+            <form id="register" class="input-group" method="post" onsubmit="return val()">
+               <input type="email" class="input-field" name='ename' id='ename' placeholder="Email" >
+               <input type="password" class="input-field" name='pass' id='pass' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password" >
+               <input type="password" class="input-field" name='conpass' id='pass1' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Confirm Password" required=""><br><br><br>
+               <button type="submit" class="submit-btn">REGISTER</button>
+            </form>
+         </div>
+      </div>
+      <script>
+         var x= document.getElementById("login");
+         var y= document.getElementById("register");
+         var z= document.getElementById("btn");
+         function Register(){
+         x.style.left="-400px";
+         y.style.left="50px";
+         z.style.left="110px";
+         }
+         function Login(){
+         x.style.left="50px";
+         y.style.left="450px";
+         z.style.left="0px";
+         }
+      </script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>AOS.init({
+        offset: 400,
+        duration: 1000
+      });</script>
+   </body>
+</html>
