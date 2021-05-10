@@ -165,6 +165,7 @@ text-align:center;
 .footer
 {
 	bottom:0;
+	display: none;
 }
 .about-box{
 padding: 10px 30px;	
