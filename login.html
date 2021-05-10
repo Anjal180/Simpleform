@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+	    <meta charset="UTF-8"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	    <link rel="stylesheet" href="index.css">
+	    <link rel="stylesheet" href="login.css">
+	    <link href="logo.png" rel="icon">
+	    <link href="logo.png" rel="apple-touch-icon">
+		<title>Index</title>
+    </head>
+	<body>
+		<div class="hero">
+			<div class="nav-bar">
+				<div class="nav-logo">
+					<a href="index.html">APPETITE</a>
+				</div>
+				<div class="nav-links" id="nav-links">
+					<i class="fa fa-close" onclick="closeMenu()"></i>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About us</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="menu.html">Menu</a></li>
+						<li><a href="login.html" class="btn btn-warning" class="btn">Login</a></li>
+					</ul>
+				</div>
+				<i class="fa fa-bars" onclick="showMenu()"></i>
+			</div>
+			<div class="loginbox">
+  			<div class="wrapper">
+      			<div class="title">Login Form</div>
+				<form action="#">
+        			<div class="field">
+			          <input type="text" required>
+			          <label>Email Address</label>
+        			</div>
+					<div class="field">
+			          <input type="password" required>
+			          <label>Password</label>
+			        </div>
+					<div class="content">
+			          <div class="checkbox">
+			            <input type="checkbox" id="remember-me">
+			            <label for="remember-me">Remember me</label>
+			          </div>
+					  <div class="pass-link">
+						<a href="#">Forgot password?</a></div>
+					</div>
+					<div class="field">
+          				<input type="submit" value="Login">
+        			</div>
+					<div class="signup-link">
+					Not a member? <a href="register.html">Signup now</a></div>
+				</form>
+			</div> 
+		    </div>
+	    </div>
+		<script>
+			var show= document.getElementById('nav-links');
+			function showMenu() {
+				show.style.right="0";
+			}
+			function closeMenu(){
+				show.style.right="-200px";
+			}
+		</script>
+		<div class="footer" style="background-color: rgba(0, 0, 0, 0.5);">
+	        <h6 style="color: orange; font-weight: 600; font-size: 15px;">Working hours: 9 am to 11 pm
+				<p>&copy; 2020 Copyright:</p> 
+			</h6>
+		</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</body>
+</html>
